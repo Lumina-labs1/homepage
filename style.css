@@ -7,6 +7,7 @@ body {
   color: rgba(255, 255, 255, 0.63);
   transition: 500ms;
   margin: 0;
+  text-align: center;
 }
 .top-bar {
   display: flex;
@@ -22,26 +23,14 @@ body {
   right: 0;
   width: 100%;
 }
-
+.logo {
+  text-decoration: none;
+  font-size: 23;
+  font-weight: bold;
+  color: #cfaea4;
+}
 h1 {
-  font-size: 30;
-}
-.nav {
-  display: none;
-}
-
-.nav-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #e5d2cc;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-left: 1rem;
-  transition: 500ms;
-}
-
-.nav-btn:hover {
-  text-decoration: underline;
+  font-size: 50;
 }
 .header {
   color: #f8fb86;
@@ -63,25 +52,40 @@ h1 {
   font-size: 99%;
   font-family: sans-serif;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  height: 80px;
+  margin-right: 60px;
+  z-index: 1000;
+}
+.nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e5d2cc;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 1rem;
+  z-index: 10000;
+}
 span {
   font-size: 30;
   font-weight: bold;
 }
 .products {
   text-align: center;
-  height: fit-content;
-  margin-top: 80vh;
-}
-.our-products- {
+  margin-top: 100px;
 }
 .product-container {
   max-width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto;
   grid-auto-rows: minmax(200px, auto);
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  width: 100%;
+  padding: auto;
 }
 .product {
   margin-bottom: 50px;
@@ -132,24 +136,117 @@ a {
   color: #000000;
   font-weight: bolder;
 }
-.navcollapse {
-  display: flex;
-  background-color: #adaeac;
-  width: 30px;
-  border-radius: 2px;
-  right: 90px;
-  position: absolute;
-  float: right;
-  border: none;
-  height: 30px;
+.g {
+  width: 500px;
 }
-.navcollapse,
-.nav:active {
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #000000;
+}
+#about {
+  background-color: #f7fb86ab;
+  color: #000000;
+  left: 0%;
+  right: 0%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 70vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 19;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 960px;
+  position: relative;
   display: flex;
+  margin: auto;
+  align-self: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #363442;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e6d3cd;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-left: 1rem;
+  transition: 500ms;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 11;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* The dots/bullets/indicators */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slide {
+  height: 340px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#prices {
+  background-color: #e5d2cc;
+  color: #363442;
+  left: 0%;
+  right: 0%;
+  padding: 20px;
+  margin: auto;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20;
 }
 @media (max-width: 780px) {
+  body{
+    overflow-x: hidden;
+  }
   .top-bar {
     width: 76%;
+  }
+  .logo {
+    display: none;
   }
   .title {
     font-size: 20px;
@@ -173,8 +270,12 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .navcollapse {
-    display: flex;
-    right: 0px;
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+  .slide {
+    height:300px;
   }
 }

@@ -2,53 +2,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lumina Labs</title>
+    <link rel="icon" href="images/logo.jpeg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="top-bar">
-        <button class="navcollapse">##</button>
-        <nav class="nav">
+        <a class="logo" href="index.html">Lumina Labs</a>
+        <nav>
             <button onclick="window.location.href='#home'" class="nav-btn">Home</button>
-            <button onclick="window.location.href='#products'" class="nav-btn">Products</button <button
-                onclick="window.location.href='#contact'" class="nav-btn">Contact</button>
+            <button onclick="window.location.href='#about'" class="nav-btn">About</button>
+            <button onclick="window.location.href='#prices'" class="nav-btn">Prices</button>
+            <button onclick="window.location.href='#products'" class="nav-btn">Portfolio</button>
+            <button onclick="window.location.href='#contact'" class="nav-btn">Contact</button>
         </nav>
     </div>
     <div class="header" id="home">
-        <h1>Lumina Labs</h1>
+        <h1>Welcome To Lumina Labs</h1>
         <p>Illuminating the web, one site at a time.</p>
     </div>
     <div id="about">
-        <p></p>
-    </div>
+        <p class="about-text">
+            At Lumina Labs, we're passionate about harnessing the power of technology to drive innovation and growth.
+            Our team of
+            experts is dedicated to providing cutting-edge solutions that help businesses thrive in today's fast-paced
+            digital
+            landscape.
 
+            Our mission is to empower organizations to reach their full potential by leveraging the latest advancements
+            in
+            technology. We believe that by combining creativity, expertise, and a customer-centric approach, we can
+            deliver tailored
+            solutions that meet the unique needs of each client.
+
+            We offer a range of services designed to help businesses succeed, including:
+        <ul>
+            <li>Web development: From basic websites to complex e-commerce platforms, we build custom solutions that
+                drive
+                results.</li>
+            <li>Digital marketing: Our team helps you reach your target audience and achieve your marketing goals
+                through
+                strategic
+                planning and execution.</li>
+            <li>Consulting: Our experts provide guidance on technology strategy, implementation, and optimization to
+                ensure you're
+                getting the most out of your investments.</li>
+        </ul>
+        </p>
+    </div>
+    <div id="prices">
+        <p class="prices-txt">Package-Based Pricing
+        <ul>
+            <li>Starter: $13.29 (basic website with 5-10 pages, custom design, and essential features)</li>
+            <li>Growth: $26.58 (standard website with 10-20 pages, custom design, and advanced features)</li>
+            <li>Enterprise: $44.83 (complex website with 20+ pages, custom design, and premium features)</li>
+        </ul>
+        Hourly-Based Pricing
+        <ul>
+            <li>Development: $6.65 per hour (for custom development work, such as plugin creation or complex
+                integrations)</li>
+            <li>Design: $4.45 per hour (for custom design work, such as logo creation or graphic design)</li>
+            <li>Consulting: $3.28 per hour (for strategy sessions, website audits, or other consulting services)</li>
+        </ul>
+        Retainer-Based Pricing
+        <ul>
+            <li>Monthly Retainer: $13.29 per month (for ongoing website maintenance, updates, and support)</li>
+            <li>Quarterly Retainer: $26.58 per quarter (for regular website check-ins, updates, and strategic planning)
+            </li>
+        </ul>
+        À La Carte Services
+        <ul>
+            <li>Website Launch: $6.65 (one-time fee for launching a new website)</li>
+            <li>Website Migration: $6.65 (one-time fee for migrating an existing website to a new platform)</li>
+            <li>SEO Audit: $4.45 (one-time fee for a comprehensive SEO audit and recommendations)</li>
+        </ul>
+        </p>
+    </div>
     <div class="products" id="products">
         <h3 class="our-products">here are products made by us:</h3>
         <div class="product-container">
-            <div class="product">
-                <img class="product-img" src="images/products/rocky_land.jpg" alt="">
-                <h3 class="product-title">Product 1</h3>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img class="slide" src="images/products/Screenshot 2025-02-18 at 01-33-30 Document.png"
+                        style="width:100%">
+                    <h3 class="text"><a href="https://landing-page-example1.pages.dev/" target="_blank">Landing Page</a>
+                    </h3>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slide" src="images/products/rose_in_water.jpg" style="width:100%">
+                    <h3 class="text">Caption Two</h3>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slide" src="images/products/sand.jpg" style="width:100%">
+                    <h3 class="text">Caption Three</h3>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
-            <div class="product">
-                <img class="product-img" src="images/products/rose_in_water.jpg" alt="">
-                <h3 class="product-title">Product 2</h3>
-            </div>
-            <div class="product">
-                <img class="product-img" src="images/products/sand.jpg" alt="">
-                <h3 class="product-title">Product 3</h3>
-            </div>
-            <div class="product">
-                <img class="product-img" src="images/products/sandy_desert.jpg" alt="">
-                <h3 class="product-title">Product 4</h3>
-            </div>
-            <div class="product">
-                <img class="product-img" src="images/products/sandy_tide.jpg" alt="">
-                <h3 class="product-title">Product 5</h3>
-            </div>
-            <div class="product">
-                <img class="product-img" src="images/products/waterfall.jpg" alt="">
-                <h3 class="product-title">Product 6</h3>
-            </div>
+
         </div>
     </div>
     <div class="testimonies">
@@ -58,20 +114,15 @@
         <p>— John Doe</p>
     </div>
     <div class="contact-us" id="contact">
-        <p>In the case of bulk buying</p>
-        <div class="second-part-footer">
-            <p>you can contact us via</p>
-            <a class="link" href="mailto:oise.giwa.okugbe@gmail.com">Email</a>
-            <a class="link" href="tel:+2348022908097">Call</a>
-        </div>
+        <p>you can contact us via</p>
+        <a class="link" href="mailto:oise.giwa.okugbe@gmail.com">Email</a>
+        <a class="link" href="tel:+2348022908097">Call</a>
     </div>
     <div class="footer">
-        <p>© 2025 Landing Page</p>
+        <p>© 2025 Lumina Labs</p>
         <p>All rights reserved</p>
-        <p>Designed by <a href="https://www.linkedin.com/in/oise-giwa-okugbe-2b7100318/" target="_blank">Oise
-                Giwa-Okugbe</a></p>
     </div>
 </body>
 </html>
-<script src="script.js">
-</script>
+<script src="script.js"></script>
+
