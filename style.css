@@ -87,15 +87,6 @@ span {
   width: 100%;
   padding: auto;
 }
-.product {
-  margin-bottom: 50px;
-}
-.product-img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 100%;
-}
 .contact-us {
   background-color: #e5d2cc6c;
   color: black;
@@ -213,7 +204,9 @@ a {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
+a {
+  text-decoration: none;
+}
 .slide {
   height: 340px;
   border: 2px solid black;
@@ -239,7 +232,7 @@ a {
   font-size: 20;
 }
 @media (max-width: 780px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .top-bar {
@@ -260,6 +253,9 @@ a {
     text-align: center;
     padding: 6px;
   }
+  #about {
+    margin-top: 167%;
+  }
   .header {
     padding: 22px;
   }
@@ -276,6 +272,6 @@ a {
     font-size: 11px;
   }
   .slide {
-    height:300px;
+    height: 100%;
   }
 }
